@@ -1,0 +1,28 @@
+A*
+A
+J
+12
+A B 2
+A C 3
+B D 3
+B E 2
+C F 5
+C G 1
+D H 5
+E H 5
+F H 5
+G H 1
+H I 2
+I J 20
+10
+A 50
+B 50
+C 100
+D 10
+E 10
+F 10
+H 10
+G 10
+H 50
+I 200
+J 0

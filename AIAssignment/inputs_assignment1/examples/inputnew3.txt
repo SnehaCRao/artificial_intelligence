@@ -1,0 +1,20 @@
+A*
+S
+G
+8
+S A 1
+S B 5
+S C 8
+A D 3
+A E 7
+A G 9
+B G 4
+C G 5
+7
+S 6
+A 5
+B 4
+C 3
+D 2
+E 1 
+G 0

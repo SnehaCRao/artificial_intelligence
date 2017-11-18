@@ -1,0 +1,750 @@
+Input File: 
+BFS 
+A 
+D 
+4 
+A B 5 
+A C 3 
+B D 1 
+C D 2 
+4 
+A 4 
+B 1 
+C 1 
+D 0 
+BFS 
+inputData [BFS] 
+A 
+inputData [BFS, A] 
+D 
+inputData [BFS, A, D] 
+4 
+inputData [BFS, A, D, 4] 
+A B 5 
+inputData [BFS, A, D, 4, A B 5] 
+A C 3 
+inputData [BFS, A, D, 4, A B 5, A C 3] 
+B D 1 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1] 
+C D 2 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2] 
+4 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2, 4] 
+A 4 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2, 4, A 4] 
+B 1 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2, 4, A 4, B 1] 
+C 1 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2, 4, A 4, B 1, C 1] 
+D 0 
+inputData [BFS, A, D, 4, A B 5, A C 3, B D 1, C D 2, 4, A 4, B 1, C 1, D 0] 
+d 5 
+A : {B=5} 
+A 
+d 5 
+d 3 
+A : {B=5, C=3} 
+d 5 
+d 3 
+d 1 
+A : {B=5, C=3} 
+B : {D=1} 
+d 5 
+d 3 
+d 1 
+d 2 
+A : {B=5, C=3} 
+B : {D=1} 
+C : {D=2} 
+final live traffic linesA : {B=5, C=3} 
+final live traffic linesB : {D=1} 
+final live traffic linesC : {D=2} 
+{A=4} 
+{A=4, B=1} 
+{A=4, B=1, C=1} 
+{A=4, B=1, C=1, D=0} 
+final sunday traffic lines{A=4, B=1, C=1, D=0} 
+ffrountier:[B, C] 
+exploredBFS [A] 
+ffrountier:[C, D] 
+exploredBFS [A, B] 
+ffrountier:[D, D] 
+exploredBFS [A, B, C] 
+ffrountier:[B, C] 
+exploredBFS [A] 
+ffrountier:[C, D] 
+exploredBFS [A, B] 
+ffrountier:[D, D] 
+exploredBFS [A, B, C] 
+SHORTEST PATH :[A, B, D] 
+Content from your output file: 
+A 0 
+B 1 
+D 2 
+test case passed! 
+Input File: 
+A* 
+A 
+D 
+4 
+A B 3 
+A C 3 
+B D 2 
+C D 1 
+4 
+A 4 
+B 2 
+C 1 
+D 0 
+A* 
+inputData [A*] 
+A 
+inputData [A*, A] 
+D 
+inputData [A*, A, D] 
+4 
+inputData [A*, A, D, 4] 
+A B 3 
+inputData [A*, A, D, 4, A B 3] 
+A C 3 
+inputData [A*, A, D, 4, A B 3, A C 3] 
+B D 2 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2] 
+C D 1 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1] 
+4 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1, 4] 
+A 4 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1, 4, A 4] 
+B 2 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1, 4, A 4, B 2] 
+C 1 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1, 4, A 4, B 2, C 1] 
+D 0 
+inputData [A*, A, D, 4, A B 3, A C 3, B D 2, C D 1, 4, A 4, B 2, C 1, D 0] 
+d 3 
+A : {B=3} 
+A 
+d 3 
+d 3 
+A : {B=3, C=3} 
+d 3 
+d 3 
+d 2 
+A : {B=3, C=3} 
+B : {D=2} 
+d 3 
+d 3 
+d 2 
+d 1 
+A : {B=3, C=3} 
+B : {D=2} 
+C : {D=1} 
+final live traffic linesA : {B=3, C=3} 
+final live traffic linesB : {D=2} 
+final live traffic linesC : {D=1} 
+{A=4} 
+{A=4, B=2} 
+{A=4, B=2, C=1} 
+{A=4, B=2, C=1, D=0} 
+final sunday traffic lines{A=4, B=2, C=1, D=0} 
+ffrountier:[[C, 4], [B, 5]] 
+exploredBFS [A] 
+ffrountier:[[B, 5], [D, 5]] 
+exploredBFS [A, C] 
+ffrountier:[[D, 5], [D, 7]] 
+exploredBFS [A, B, C] 
+A STAR [A, C, D] 
+Content from your output file: 
+A 0 
+C 3 
+D 4 
+test case passed! 
+Input File: 
+DFS 
+A 
+H 
+12 
+A B 1 
+B C 1 
+C D 1 
+A E 10 
+E F 2 
+F G 3 
+G H 3 
+A I 1 
+I J 1 
+J K 1 
+K L 1 
+L H 1 
+12 
+A 4 
+I 3 
+B 3 
+E 3 
+J 3 
+C 2 
+F 2 
+K 2 
+L 1 
+G 1 
+D 1 
+H 0 
+DFS 
+inputData [DFS] 
+A 
+inputData [DFS, A] 
+H 
+inputData [DFS, A, H] 
+12 
+inputData [DFS, A, H, 12] 
+A B 1 
+inputData [DFS, A, H, 12, A B 1] 
+B C 1 
+inputData [DFS, A, H, 12, A B 1, B C 1] 
+C D 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1] 
+A E 10 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10] 
+E F 2 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2] 
+F G 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3] 
+G H 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3] 
+A I 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1] 
+I J 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1] 
+J K 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1] 
+K L 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1] 
+L H 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1] 
+12 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12] 
+A 4 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4] 
+I 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3] 
+B 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3] 
+E 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3] 
+J 3 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3] 
+C 2 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2] 
+F 2 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2] 
+K 2 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2, K 2] 
+L 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2, K 2, L 1] 
+G 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2, K 2, L 1, G 1] 
+D 1 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2, K 2, L 1, G 1, D 1] 
+H 0 
+inputData [DFS, A, H, 12, A B 1, B C 1, C D 1, A E 10, E F 2, F G 3, G H 3, A I 1, I J 1, J K 1, K L 1, L H 1, 12, A 4, I 3, B 3, E 3, J 3, C 2, F 2, K 2, L 1, G 1, D 1, H 0] 
+d 1 
+A : {B=1} 
+d 1 
+d 1 
+A : {B=1} 
+B : {C=1} 
+d 1 
+d 1 
+d 1 
+A : {B=1} 
+B : {C=1} 
+C : {D=1} 
+A 
+d 1 
+d 10 
+d 1 
+d 1 
+A : {B=1, E=10} 
+B : {C=1} 
+C : {D=1} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 2 
+A : {B=1, E=10} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 2 
+d 3 
+A : {B=1, E=10} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+A : {B=1, E=10} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+A 
+d 1 
+d 10 
+d 1 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+A : {B=1, E=10, I=1} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+d 1 
+A : {B=1, E=10, I=1} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+I : {J=1} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+d 1 
+d 1 
+A : {B=1, E=10, I=1} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+I : {J=1} 
+J : {K=1} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+d 1 
+d 1 
+d 1 
+A : {B=1, E=10, I=1} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+I : {J=1} 
+J : {K=1} 
+K : {L=1} 
+d 1 
+d 10 
+d 1 
+d 1 
+d 1 
+d 2 
+d 3 
+d 3 
+d 1 
+d 1 
+d 1 
+d 1 
+A : {B=1, E=10, I=1} 
+B : {C=1} 
+C : {D=1} 
+E : {F=2} 
+F : {G=3} 
+G : {H=3} 
+I : {J=1} 
+J : {K=1} 
+K : {L=1} 
+L : {H=1} 
+final live traffic linesA : {B=1, E=10, I=1} 
+final live traffic linesB : {C=1} 
+final live traffic linesC : {D=1} 
+final live traffic linesE : {F=2} 
+final live traffic linesF : {G=3} 
+final live traffic linesG : {H=3} 
+final live traffic linesI : {J=1} 
+final live traffic linesJ : {K=1} 
+final live traffic linesK : {L=1} 
+final live traffic linesL : {H=1} 
+{A=4} 
+{A=4, I=3} 
+{A=4, B=3, I=3} 
+{A=4, B=3, E=3, I=3} 
+{A=4, B=3, E=3, I=3, J=3} 
+{A=4, B=3, C=2, E=3, I=3, J=3} 
+{A=4, B=3, C=2, E=3, F=2, I=3, J=3} 
+{A=4, B=3, C=2, E=3, F=2, I=3, J=3, K=2} 
+{A=4, B=3, C=2, E=3, F=2, I=3, J=3, K=2, L=1} 
+{A=4, B=3, C=2, E=3, F=2, G=1, I=3, J=3, K=2, L=1} 
+{A=4, B=3, C=2, D=1, E=3, F=2, G=1, I=3, J=3, K=2, L=1} 
+{A=4, B=3, C=2, D=1, E=3, F=2, G=1, H=0, I=3, J=3, K=2, L=1} 
+final sunday traffic lines{A=4, B=3, C=2, D=1, E=3, F=2, G=1, H=0, I=3, J=3, K=2, L=1} 
+ffrountier:[I, E, B] 
+exploredBFS [A] 
+ffrountier:[I, E, C] 
+exploredBFS [A, B] 
+ffrountier:[I, E, D] 
+exploredBFS [A, B, C] 
+ffrountier:[I, E] 
+exploredBFS [A, B, C, D] 
+ffrountier:[I, F] 
+exploredBFS [A, B, C, D, E] 
+ffrountier:[I, G] 
+exploredBFS [A, B, C, D, E, F] 
+ffrountier:[I, E, B] 
+exploredBFS [A] 
+ffrountier:[I, E, C] 
+exploredBFS [A, B] 
+ffrountier:[I, E, D] 
+exploredBFS [A, B, C] 
+ffrountier:[I, E] 
+exploredBFS [A, B, C, D] 
+ffrountier:[I, F] 
+exploredBFS [A, B, C, D, E] 
+ffrountier:[I, G] 
+exploredBFS [A, B, C, D, E, F] 
+DFS PATH [A, E, F, G, H] 
+Content from your output file: 
+A 0 
+E 1 
+F 2 
+G 3 
+H 4 
+test case passed! 
+Input File: 
+DFS 
+Andy 
+Zoe 
+10 
+Andy Bill 4 
+Andy Claire 3 
+Andy Daniel 2 
+Bill Elaine 3 
+Bill Zoe 1 
+Claire Elaine 4 
+Claire Zoe 2 
+Daniel Elaine 2 
+Daniel Zoe 2 
+Elaine Zoe 2 
+6 
+Andy 2 
+Bill 1 
+Claire 1 
+Daniel 1 
+Elaine 1 
+Zoe 0 
+DFS 
+inputData [DFS] 
+Andy 
+inputData [DFS, Andy] 
+Zoe 
+inputData [DFS, Andy, Zoe] 
+10 
+inputData [DFS, Andy, Zoe, 10] 
+Andy Bill 4 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4] 
+Andy Claire 3 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3] 
+Andy Daniel 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2] 
+Bill Elaine 3 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3] 
+Bill Zoe 1 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1] 
+Claire Elaine 4 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4] 
+Claire Zoe 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2] 
+Daniel Elaine 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2] 
+Daniel Zoe 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2] 
+Elaine Zoe 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2] 
+6 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6] 
+Andy 2 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2]
+Bill 1 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2, Bill 1] 
+Claire 1 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2, Bill 1, Claire 1] 
+Daniel 1 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2, Bill 1, Claire 1, Daniel 1] 
+Elaine 1 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2, Bill 1, Claire 1, Daniel 1, Elaine 1] 
+Zoe 0 
+inputData [DFS, Andy, Zoe, 10, Andy Bill 4, Andy Claire 3, Andy Daniel 2, Bill Elaine 3, Bill Zoe 1, Claire Elaine 4, Claire Zoe 2, Daniel Elaine 2, Daniel Zoe 2, Elaine Zoe 2, 6, Andy 2, Bill 1, Claire 1, Daniel 1, Elaine 1, Zoe 0] 
+d 4 
+Andy : {Bill=4} 
+Andy 
+d 4 
+d 3 
+Andy : {Bill=4, Claire=3} 
+Andy 
+d 4 
+d 3 
+d 2 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+d 3 
+d 4 
+d 3 
+d 2 
+Bill : {Elaine=3} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+Bill 
+d 3 
+d 1 
+d 4 
+d 3 
+d 2 
+Bill : {Elaine=3, Zoe=1} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+d 4 
+d 3 
+d 1 
+d 4 
+d 3 
+d 2 
+Claire : {Elaine=4} 
+Bill : {Elaine=3, Zoe=1} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+Claire 
+d 4 
+d 2 
+d 3 
+d 1 
+d 4 
+d 3 
+d 2 
+Claire : {Elaine=4, Zoe=2} 
+Bill : {Elaine=3, Zoe=1} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+d 4 
+d 2 
+d 3 
+d 1 
+d 2 
+d 4 
+d 3 
+d 2 
+Claire : {Elaine=4, Zoe=2} 
+Bill : {Elaine=3, Zoe=1} 
+Daniel : {Elaine=2} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+Daniel 
+d 4 
+d 2 
+d 3 
+d 1 
+d 2 
+d 2 
+d 4 
+d 3 
+d 2 
+Claire : {Elaine=4, Zoe=2} 
+Bill : {Elaine=3, Zoe=1} 
+Daniel : {Elaine=2, Zoe=2} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+d 4 
+d 2 
+d 3 
+d 1 
+d 2 
+d 2 
+d 2 
+d 4 
+d 3 
+d 2 
+Claire : {Elaine=4, Zoe=2} 
+Bill : {Elaine=3, Zoe=1} 
+Daniel : {Elaine=2, Zoe=2} 
+Elaine : {Zoe=2} 
+Andy : {Bill=4, Claire=3, Daniel=2} 
+final live traffic linesClaire : {Elaine=4, Zoe=2} 
+final live traffic linesBill : {Elaine=3, Zoe=1} 
+final live traffic linesDaniel : {Elaine=2, Zoe=2} 
+final live traffic linesElaine : {Zoe=2} 
+final live traffic linesAndy : {Bill=4, Claire=3, Daniel=2} 
+{Andy=2} 
+{Bill=1, Andy=2} 
+{Claire=1, Bill=1, Andy=2} 
+{Claire=1, Bill=1, Daniel=1, Andy=2} 
+{Claire=1, Bill=1, Daniel=1, Elaine=1, Andy=2} 
+{Claire=1, Zoe=0, Bill=1, Daniel=1, Elaine=1, Andy=2} 
+final sunday traffic lines{Claire=1, Zoe=0, Bill=1, Daniel=1, Elaine=1, Andy=2} 
+ffrountier:[Daniel, Claire, Bill] 
+exploredBFS [Andy] 
+ffrountier:[Daniel, Claire, Bill] 
+exploredBFS [Andy] 
+DFS PATH [Andy, Bill, Zoe] 
+Content from your output file: 
+Andy 0 
+Bill 1 
+Zoe 2 
+test case passed! 
+Input File: 
+UCS 
+A 
+G 
+6 
+A B 2 
+A C 3 
+B D 3 
+C E 2 
+D G 1 
+E G 1 
+6 
+A 3 
+B 2 
+C 2 
+D 1 
+E 1 
+G 0 
+UCS 
+inputData [UCS] 
+A 
+inputData [UCS, A] 
+G 
+inputData [UCS, A, G] 
+6 
+inputData [UCS, A, G, 6] 
+A B 2 
+inputData [UCS, A, G, 6, A B 2] 
+A C 3 
+inputData [UCS, A, G, 6, A B 2, A C 3] 
+B D 3 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3] 
+C E 2 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2] 
+D G 1 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1] 
+E G 1 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1] 
+6 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6] 
+A 3 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3] 
+B 2 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3, B 2] 
+C 2 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3, B 2, C 2] 
+D 1 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3, B 2, C 2, D 1] 
+E 1 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3, B 2, C 2, D 1, E 1] 
+G 0 
+inputData [UCS, A, G, 6, A B 2, A C 3, B D 3, C E 2, D G 1, E G 1, 6, A 3, B 2, C 2, D 1, E 1, G 0] 
+d 2 
+A : {B=2} 
+A 
+d 2 
+d 3 
+A : {B=2, C=3} 
+d 2 
+d 3 
+d 3 
+A : {B=2, C=3} 
+B : {D=3} 
+d 2 
+d 3 
+d 3 
+d 2 
+A : {B=2, C=3} 
+B : {D=3} 
+C : {E=2} 
+d 2 
+d 3 
+d 3 
+d 2 
+d 1 
+A : {B=2, C=3} 
+B : {D=3} 
+C : {E=2} 
+D : {G=1} 
+d 2 
+d 3 
+d 3 
+d 2 
+d 1 
+d 1 
+A : {B=2, C=3} 
+B : {D=3} 
+C : {E=2} 
+D : {G=1} 
+E : {G=1} 
+final live traffic linesA : {B=2, C=3} 
+final live traffic linesB : {D=3} 
+final live traffic linesC : {E=2} 
+final live traffic linesD : {G=1} 
+final live traffic linesE : {G=1} 
+{A=3} 
+{A=3, B=2} 
+{A=3, B=2, C=2} 
+{A=3, B=2, C=2, D=1} 
+{A=3, B=2, C=2, D=1, E=1} 
+{A=3, B=2, C=2, D=1, E=1, G=0} 
+final sunday traffic lines{A=3, B=2, C=2, D=1, E=1, G=0} 
+ffrountier:[[B, 2], [C, 3]] 
+exploredBFS [A] 
+ffrountier:[[C, 3], [D, 5]] 
+exploredBFS [A, B] 
+ffrountier:[[D, 5], [E, 5]] 
+exploredBFS [A, B, C] 
+ffrountier:[[E, 5], [G, 6]] 
+exploredBFS [A, B, C, D] 
+ffrountier:[[G, 6], [G, 6]] 
+exploredBFS [A, B, C, D, E] 
+ffrountier:[[B, 2], [C, 3]] 
+exploredBFS [A] 
+ffrountier:[[C, 3], [D, 5]] 
+exploredBFS [A, B] 
+ffrountier:[[D, 5], [E, 5]] 
+exploredBFS [A, B, C] 
+ffrountier:[[E, 5], [G, 6]] 
+exploredBFS [A, B, C, D] 
+ffrountier:[[G, 6], [G, 6]] 
+exploredBFS [A, B, C, D, E] 
+UCS DATA [A, B, D, G] 
+Content from your output file: 
+A 0 
+B 2 
+D 5 
+G 6 
+test case passed! 

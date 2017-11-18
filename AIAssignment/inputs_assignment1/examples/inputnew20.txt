@@ -1,0 +1,16 @@
+UCS
+A
+G
+12
+A B 2
+A C 3
+B D 3
+C E 2
+D F 2
+E H 3
+F I 3
+H J 2
+I K 2
+J L 3
+K G 3
+L G 2
